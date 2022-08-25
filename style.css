@@ -1,0 +1,11 @@
+/*
+    Esta es la estructura básica de css.
+
+    selector {
+        propiedad:"valor";
+    }
+*/
+
+* {
+    color:rgba(101, 131, 196, 0.74);
+}
