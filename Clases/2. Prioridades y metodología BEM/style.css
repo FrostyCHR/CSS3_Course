@@ -1,0 +1,50 @@
+.h1bienpiola {
+    color:red;
+}
+
+[poratributo="valor"] {
+    color:blueviolet;
+}
+
+/* 
+    En este caso hay cascada, porque las clases y los elementos tienen la misma jerarquía.
+*/
+
+#mainp {
+    color:aqua;
+}
+
+.pruebas {
+    color:yellow;
+}
+
+/* En este caso no importa la cascada, porque el id tiene más jerarquía que una clase.
+
+Jerarquía:
+
+!important (el que la tiene más grande)
+id's
+clases y atributos
+elementos
+
+*/
+
+
+.signInForm__UserName {
+    color:crimson;
+}
+
+.signInForm__Password {
+    color: deeppink;
+}
+
+.signInForm__UserName--special {
+    color: darkgoldenrod;
+}
+
+/*
+    Metodología BEM: 
+
+    Poner la clase como la clase anterior + __. 
+    Si hay varios iguales, pero uno es especial, usamos -- + algo.
+*/

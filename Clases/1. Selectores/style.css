@@ -1,0 +1,62 @@
+/*
+    Esta es la estructura básica de css.
+
+    selector {
+        propiedad:valor;
+    }
+*/
+
+/* 
+
+Selectores:
+
+* Es el selector universal, modifica todo.
+(etiqueta) Modifica todas las etiquetas de ese tipo. h1 por ejemplo.
+Clases. Podemos poner el atributo class a una etiqueta, y con eso podemos seleccionar todas las etiquetas con esa clase. Es indiferente de las etiquetas.
+ID's. Seleccionamos los elementos que tienen ese identificador.
+Por atributo. Podemos ponerle un atributo personalizado a una etiqueta. También su correspondiente valor.
+
+Por etiquetas dentro de etiquetas. Para modificar solamente los p que estén dentro de un aside, por ejemplo. Se puede mezclar con id's clases, y hacerse más de una vez.
+
+Hover. Es cuando pasamos el ratón por encima. Se pueden usar además otras cosas vistas antes.
+
+
+
+DIFERENCIA ENTRE CLASE Y ID: Clase se puede repetir en varios elementos, en cambio id es único, solo un elemento lo puede tener. ID tiene más jerarquía.
+
+*/
+/*
+
+    * {
+        color:red;
+    }
+
+    p {
+        color:red;
+    }
+
+    .aside_secundario {
+    color:red;
+    }
+
+    #mainp {
+    font-size: 500%;
+    }
+
+    [poratributo="valor"] {
+    color:blue;
+    }
+
+    aside p {
+    color:purple;
+    }
+
+    footer .footer a:hover {
+    color:rgb(150, 150, 16);
+    }
+
+*/
+
+.enlaces ul li:hover {
+    color:yellow;
+}
