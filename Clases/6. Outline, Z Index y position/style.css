@@ -1,0 +1,91 @@
+/*
+.mainDiv{
+    background-color: aqua;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    outline: 5px solid saddlebrown;
+}
+.anotherDiv{
+    background-color: blue;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    outline: 5px solid navy;
+    opacity: 0.5;
+}
+
+*/
+
+/* 
+    La diferencia entre outline y border es que outline no ocupa espacio y border sí. 
+    O sea, border puede hacer que el content y padding se hagan más pequeños, al este ocupar espacio y al tener una medida definida. Outline no hace eso.
+
+    Opacicty determina la transparencia.
+*/
+
+div{
+    width: 100px;
+    height: 100px;
+}
+
+.box_1{
+    background-color: firebrick;
+    position: relative;
+    top: 20px;
+    outline: 5px solid teal;
+}
+
+.box_2{
+    background-color: black;
+    position: relative;
+    outline: 5px solid indianred;
+}
+
+.box_3{
+    background-color: hotpink;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    /* Así se centra sobre su contenedor */
+}
+
+.box_4{
+    background-color: khaki;
+    position: fixed;
+}
+.lorem{
+    margin: auto;
+    width: 100vw;
+    margin-left: 140px;
+    margin-top: 300px;
+}
+
+/* 
+    Z index:
+        Determina como de delante va a estar. Solo si el elemento está posicionado. Tiene más importancia que el flujo HTML. 
+        Si queremos que una caja "padre" superponga a una "hija", la única manera es que ambos estén posicionados y la hija tenga un Z index de -1.
+    
+
+    Position static: La típica.
+
+    Position relative: 
+        Ahora podemos poner top y left para posicionar la caja, valores negativos admitidos. El espacio donde se dibujó la caja se queda reservado.
+        
+    Position absolute: 
+        A pesar de ser un elemento en bloque, el tamaño se ajusta al contenido como si fuera en línea, a no ser que le digamos lo contrario mediante width o height.
+        No ocupa el espacio que ocupaba cuando fue dibujada.
+        El punto de referencia pasa a ser el viewport (la pantalla vamos) a no ser que su contenedor esté posicionado.
+        
+    Position fixed: 
+        Es igual a absolute, pero sigue en el mismo sitio al hacer scroll.
+        
+    Position sticky: 
+        Es una mezcla entre fixed y relative. 
+        Ocupa espacio, como relative, pero al llegar a cierto momento del scroll, pasa a ser fixed.
+*/

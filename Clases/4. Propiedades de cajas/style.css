@@ -1,0 +1,25 @@
+/* Propiedades de cajas. */
+
+h1 {
+    padding: 0 50vw;
+}
+
+.mainDiv__h2 {
+    background-color: aqua;
+    display: block;
+    padding: 20px 30px; /* 20 en top, 20 en bottom, 30 en right y 30 en left. */
+    width: 100px;
+    height: 10px;
+}
+
+/*
+    Padding: Es la distancia entre el texto y el tamaño de la caja. (No siempre es lo mismo.)
+        Hay 4 padding, top, right, bottom and left. Al ser una "shorthand property" se puede poner simplemente padding y afecta a los 4.
+        Si ponemos dos partes, el primero afectará al eje y y el segundo al x.
+    
+    Width y height: Si el width o height es más pequeño que el texto, con box-sizing: border-box, lo que importa el el width o height, y el padding no afecta.
+        Por lo que si el total del padding en un eje es mayor al width o al height, con esa propiedad, se hará padding por un lado, y por el otro será hasta que llege al width o height.
+        Incluso puede llegar a no haber padding en un lado, si el texto de este ya sobrepasa el width debido a que el padding del lado contrario es muy grande.
+
+        SI el padding es más largo que el width, a pesar del box sizing, le suda las pelotas y se pone tan ancho como el padding
+*/

@@ -1,0 +1,48 @@
+.div--with--b_b{
+    background-color: aquamarine;
+    padding: 70px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.div--with--b__h2{
+    color: white;
+    margin-bottom: 80px;
+    background-color:black;
+    border: 10px double yellow;
+}
+
+/* A las cajas en línea no se les puede poner un margin en el eje y. 
+El margin llega hasta el margin de la otra caja, si esta no tiene en ese eje, llega hasta el content, no al padding.
+En el eje x, el margin sí que marca la distancia entre paddings.
+*/
+
+/*
+    Border:
+        Radius: Para redondear.
+
+        Border: <tamaño del borde> <estilo del borde> <color>;
+            Estilos: Solid(normal), dashed(se va cambiando con el background color), double(doble borde), groove y ridge(bastante raro), 
+            inset y outset(una mitad con un color, y la otra con algo parecido)
+    
+    Box shadow: 
+*/
+
+.pLorem{
+    margin-top: 80px;
+    padding: 20px;
+    background-color: coral;
+    border-radius: 10px;
+    border: 10px solid lightblue;
+    font-weight: 600;
+
+    box-shadow: 0 0 40px 0 blue;
+    text-shadow: 0px 2px 10px white, 0px 2px 10px white,0px 2px 10px white,0px 2px 10px white; /* Para darle más efecto se vuelve a pegar de esta manera. */
+    transform: rotate(180deg);
+}
+
+/* 
+
+    Sombras: Moverse en el eje x, moverse en el eje y, tmaño de la sombra, 0, color.
+
+*/
