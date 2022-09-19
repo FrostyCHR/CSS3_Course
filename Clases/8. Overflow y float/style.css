@@ -1,0 +1,43 @@
+/*
+div{
+    width: 100px;
+    height: 300px;
+    background: teal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+
+    overflow: auto
+}
+*/
+
+/*
+    El overflow es el contenido que sobresale de la caja. El valor es lo que hacemos con ello.
+        Hidden: No se ve, easy.
+        Scroll: Se nos muestra la posibilidad de scrollear en ambos ejes.
+        Auto: Si es necesario, añade scroll, si no, no.
+*/
+
+section{
+    margin: 20px;
+}
+
+p{
+    font-size: 20px;
+}
+
+img{
+    width: 450px;
+    float: left;
+    margin: 20px;
+}
+
+/*
+    Float sirve principalmente para hacer que un texto envuelva a una imagen, como se ve arriba.
+    Lo que hace es que el elemento flotante "salga" del flujo de la web, para alinearse arriba a la derecha o izquierda de se contenedor.
+    Por lo tanto, el texto sube (porque dejan de ser elementos en bloque)
+*/

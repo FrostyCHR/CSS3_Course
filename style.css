@@ -1,14 +1,52 @@
-div{
-    width: 200px;
-    height: 200px;
-    background: fuchsia;
-    margin: 15px;
-    display: inline-block;
-    position: absolute;
+.text{
+    font-size: 30px;
+    padding: 15px;
 }
 
-.div2{
-    left: 0;
-    right: 0;
-    margin: auto;
+.text::selection{
+    color: white;
+    background: black;
 }
+
+.text::first-letter{
+    font-size: 100px;
+    float: left;
+}
+
+.text::first-line{
+    color: aquamarine;
+}
+
+form{
+    margin: 200px 0 0 100px;
+}
+
+input{
+    background: gold;
+    padding: 15px;
+    width: 500px;
+}
+
+input::placeholder{
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input:hover{
+    background: yellow;
+    width: 550px;
+    height: 70px;
+}
+
+
+
+/*
+    First line y first letter: 
+        No funcionan con elementos en línea, sí inline-block, por ejemplo.
+    
+    Selection:
+        Podemos cambiar cosas como el color cuando el usuario selecciona algo.
+    
+    Placeholder:
+        Podemos cambiar propiedades del texto (u otra cosa) que haya predeterminado en un input.
+*/

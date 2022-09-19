@@ -1,0 +1,21 @@
+div{
+    width: 200px;
+    height: 200px;
+    background: fuchsia;
+    margin: 15px;
+    display: inline-block;
+    position: absolute;
+}
+
+.div2{
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.div3{
+    outline: 3px double blue;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
