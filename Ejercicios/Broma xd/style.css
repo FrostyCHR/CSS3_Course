@@ -1,0 +1,39 @@
+section{
+    text-align: center;
+}
+
+.section1{
+    height: 500px;
+    background-color: blue;
+}
+
+.container{
+    display: flex;
+}
+
+.section2{
+    height: 500px;
+    background-color: lightblue;
+}
+.section3{
+    height: 500px;
+    background-color: lightgray;
+}
+
+
+
+.section4{
+    height: 1000px;
+    background-color: gray;
+}
+
+.section5{
+    height: 500px;
+    background-color: orange;
+    width: 700px;
+}
+.section6{
+    height: 500px;
+    background-color: red;
+    width: 700px;
+}

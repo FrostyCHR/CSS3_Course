@@ -1,52 +1,44 @@
-.text{
-    font-size: 30px;
-    padding: 15px;
-}
-
-.text::selection{
-    color: white;
-    background: black;
-}
-
-.text::first-letter{
-    font-size: 100px;
-    float: left;
-}
-
-.text::first-line{
-    color: aquamarine;
-}
-
-form{
-    margin: 200px 0 0 100px;
-}
-
-input{
-    background: gold;
-    padding: 15px;
-    width: 500px;
-}
-
-input::placeholder{
-    font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-input:hover{
-    background: yellow;
-    width: 550px;
-    height: 70px;
-}
-
-
+/* FLEXBOX */
+/* Conceptos básicos*/
 
 /*
-    First line y first letter: 
-        No funcionan con elementos en línea, sí inline-block, por ejemplo.
-    
-    Selection:
-        Podemos cambiar cosas como el color cuando el usuario selecciona algo.
-    
-    Placeholder:
-        Podemos cambiar propiedades del texto (u otra cosa) que haya predeterminado en un input.
+    Flex container: Un div (normalmente) con display flex y que contiene elementos.
+    Flex item: Estos elementos dentro de un contenedor.
+
+    Main axis: Por defecto, es el eje x. Tiene dos partes: Main-start y  main-end.
+    Cross axis / secondary axis: Por defecto es el eje y. Mismas partes que en el main.
+
+    Flex-direction: Indica cuál y en qué dirección va en main axis. Row, column, y versiones reverse. (espejo, invierten la dirección)
+    Flex-wrap: Indica por así decirlo si le permitimos o no cambiar las medidas de las cajas. 
+    Sirve para tirar elementos abajo si no hay espacio, en lugar de hacerlos más pequeños. También reverse, que va hacia arriba en lugar de abajo.
+    Flex-flow: Agrupa direction y wrap.
+
+    Justify-content: Posiciona los elementos en el main-axis.
+        Center: Los centra.
+        Space-between: Los reparte para ocupar todo el container. El primer y último elemento se pegan a los bordes.
+        Space-around: Ahora sí se ponen márgenes automáticos. En los bordes hay la mitad que en el resto, porque funciona igual a margin.
+        Space-evenly: Hay LA MISMA DISTANCIA entre cada caja. 
 */
+
+/* Ejemplos */
+
+.boxContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.boxContainer__element{
+    background-color: #e6b58b;
+    height: 250px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 250px;
+    
+}
+
+.boxContainer__element--alternativeColor{
+    background-color: #35bfff;
+}

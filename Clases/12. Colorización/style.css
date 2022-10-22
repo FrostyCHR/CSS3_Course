@@ -1,0 +1,35 @@
+div{
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+}
+
+.nombre{
+    background: lightblue;
+}
+
+/*
+    La manera de indicar colores hasta ahora.
+*/
+
+.rgba{
+    background: rgba(215, 215, 215, 1);
+}
+
+/*
+    El máximo de cada valor es 255. El cuarto es lo mismo que la propiedad opacity. El primero es rojo, segundo verde y tercero azul.
+*/
+
+.hexadecimal{
+    background: #aa00ee;
+}
+
+/*
+    Hay dos maneras:
+
+    3 cifras.
+    6 cifras.
+
+    En ambos casos tenemos 16 unidades. 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e y f.
+    Al mezclarlos podemos obtener colores de manera similar a como hacemos con rgba o rgb.
+*/

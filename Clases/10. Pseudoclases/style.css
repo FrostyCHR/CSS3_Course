@@ -1,0 +1,80 @@
+
+.caja{
+    background: cadetblue;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.dentro{
+    background: firebrick;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.caja:hover{
+    background: rgb(66, 109, 110);
+    width: 200px;
+    height: 200px;
+    transition: all, 2s;
+}
+
+a:link{
+    color: red;
+}
+
+a:visited{
+    color: lawngreen;
+}
+
+.active{
+    background: rebeccapurple;
+    width: 200px;
+    height: 200px;
+    margin: 100px;
+}
+
+.active:active{
+    background: hotpink;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    transition: all, 10s;
+}
+
+
+.focus{
+    margin: 30px;
+    margin-left: 10px;
+    width: 70px;
+    transition: all .35s;
+    background: rgb(218, 217, 217);
+}
+
+.focus:focus{
+    width: 200px;
+    padding: 15px;
+    background: #ffff;
+}
+
+.focus::placeholder{
+    color: rgb(219, 219, 219);
+}
+
+
+/*
+    Pseudoclases:
+        Hover: Cuando pasamos el ratón por encima. Se puede aplicar a todo, y cambiar de todo.
+        Link: Cambia el estilo de una etiqueta "a" si NO la hemos visitado.
+        Visited: Cambia el estilo de una etiqueta "a" si YA la hemos visitado.
+        Active: Cuando estamos presionando el clic izquierdo sobre la caja.
+        Focus: Solo para inputs. Modifica el input mientras estamos haciendo algo sobre ellos.
+
+        El nivel de especificidad funciona de manera normal. En pseudoclases como link, esta tiene más prioridad que otra clase. (Por encima de clase, pero por debajo de un ID)
+*/

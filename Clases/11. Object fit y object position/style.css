@@ -1,0 +1,77 @@
+div{
+    margin: 20px;
+}
+
+.caja{
+    position: relative;
+    top: 150px;
+    left: 150px;
+    outline: 2px solid red;
+    display: inline-block;
+    width: 700px;
+    height: 100px;
+}
+
+.caja img{
+    outline: 2px double blue;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.caja2{
+    position: relative;
+    top: 150px;
+    left: 150px;
+    outline: 2px solid red;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+}
+
+.caja2 img{
+    outline: 2px double blue;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.caja3{
+    position: relative;
+    top: 150px;
+    left: 150px;
+    outline: 2px solid red;
+    display: inline-block;
+    width: 1000px;
+    height: 200px;
+}
+
+.caja3 img{
+    outline: 2px double blue;
+    height: 100%;
+    width: 100%;
+    object-fit: none;
+    object-position: top;
+}
+
+
+/*
+    De por sí, las imágenes se hacen todo lo grande que pueden, sin deformarse. A veces no xd.
+
+    Contain: 
+        Este valor hace que la imagen se haga grande, pero sin pasarse de los limites. También la centra.
+    
+    Cover: 
+        La imagen ocupa todo el contenedor, pero sin deformarse. Eso sí, se cortan algunas partes. (Se ajusta al contenedor)
+    
+    None: 
+        Pone la resolución original, nada más.
+    
+    Scale-down:
+        Escoje la resolución más pequeña entre cover y none. (Creo)
+
+
+
+    Object position:
+        Top, bottom, right, left, em, px, % ... Para enfocar una parte de una imagen cuando esta está cortada, por ejemplo por object-fit none o cover.
+*/

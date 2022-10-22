@@ -52,7 +52,7 @@ div{
     top: 0;
     bottom: 0;
     margin: auto;
-    /* Así se centra sobre su contenedor */
+    /* Así se centra sobre su contenedor OJO, debe tener medidas. */
 }
 
 .box_4{
