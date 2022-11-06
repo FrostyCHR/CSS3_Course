@@ -5,19 +5,47 @@
     align-self: flex-start;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 nav{
     background: #777;
     padding: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    
+}
+
+.cualquiera{
+    display: flex;
     flex-direction: column;
     
 }
 
+nav > *{
+    margin: 0px 40px;
+}
+
+.icon{
+    color: #fff;
+    font-size: 50px;
+}
+
+.nav__ul{
+    display: none;
+}
+
+.nav__icon:hover ~ ul {
+    display: block;
+    right: 0;
+}
+
 .prueba{
     background: #777;
-    height: 100px;
+    height: 50px;
 }
 
 .nav__logoImg{
@@ -25,11 +53,24 @@ nav{
 }
 
 ul{
+    position: absolute;
+    top: 110px;
+    right: -500px;
+    background-color: #777;
+    text-align: center;
+
+    width: 150px;
+    height: 70px;
+
+
+
+    
+
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 100px;
     list-style: none;
 }
 
@@ -54,21 +95,29 @@ p{
     header{
         top: -40px;
     }
-
-    /* HACER EL EFECTO DE QUE ES AL INICIO MÁS GRANDE ARRIBA */
     
     nav{
         flex-direction: row;
         justify-content: space-around;
     }
 
-    .nav__logoImg{
-        width: 115px;
+    .nav__icon{
+        display: none;
     }
 
-    ul{
+    .nav__ul{
+        position: static;
         display: flex;
         flex-direction: row;
+        text-align: none;
+    }
+
+    .nav__links{
+        display: block;
+    }
+
+    .nav__logoImg{
+        width: 115px;
     }
 
     ul a{

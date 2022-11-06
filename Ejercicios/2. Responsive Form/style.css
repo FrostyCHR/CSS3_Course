@@ -1,0 +1,178 @@
+/* MAIN STRUCTURE */
+
+body{
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.send-email{
+    
+    align-items: center;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+}
+
+/* TITLES */
+
+h3{
+
+    color: #ddd;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+    margin-left: 20px;
+
+}
+
+/* CONTAINERS */
+
+.send-email__icon-container{
+    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    margin-left: 50px;
+    width: 100%;
+
+}
+
+
+.send-email__input-container{
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+
+/* ICON */
+
+.send-email__icon{
+
+    font-size: 12em;
+    color: #fff;
+
+}
+
+
+/* GENERAL STYLES FOR INPUTS */
+
+.send-email__input{
+
+    background:transparent;
+    border: none;
+    border-bottom: 5px solid #11eeff ;
+    color: #ddd;
+    font-size: 17px;
+    font-family: 'Source Serif Pro', serif;
+    margin: 30px 20px;
+    outline: none;
+
+}
+
+.send-email__input::placeholder{
+    
+    color: #666;
+    font-family: 'Source Serif Pro', serif;
+
+}
+
+.send-email__input:focus{
+    
+    color: #ddd;
+    font-family: 'Source Serif Pro', serif;
+    outline: none;
+
+    /* Gradient */
+    background: rgb(51,51,51);
+    background: linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(34,34,34,1) 100%);
+
+}
+
+/* EMAIL INPUT */
+
+.send-email__input--email{
+    margin: 25px 20px 10px;
+}
+
+/* SUBJECT INPUT */
+
+.send-email__input--subject{
+    margin: 10px 20px 10px;
+}
+
+/* MESSAGE INPUT */
+
+.send-email__input--message{
+    
+    margin: 10px 20px 10px;
+    min-height: 150px;
+    resize: none;
+
+}
+
+.send-email__input--message:focus{
+
+    overflow: auto;
+
+}
+
+/* SUBMIT BUTTON */
+
+.send-email__input--submit{
+
+    color: #ddd;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+
+
+@media  (min-width:1000px) {
+    
+    /* MAIN STRUCTURE */
+
+    .send-email{
+    
+        flex-direction: row;
+        min-width: 600px;
+        width: 60em;
+        
+    
+    }
+
+
+    /* CONTAINERS */
+
+    .send-email__icon-container{
+
+        width: 35%;
+    
+    }
+
+
+    .send-email__input-container{
+        
+        margin: 30px;
+        width: 60%;
+
+        flex-grow: 2;
+
+    }
+
+    .send-email__icon{
+
+        font-size: 18vw;
+    
+    }
+
+
+}

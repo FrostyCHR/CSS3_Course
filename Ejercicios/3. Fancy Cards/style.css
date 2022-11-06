@@ -1,0 +1,124 @@
+/* CONTAINERS */
+
+.supra-container{
+
+    align-items: flex-end;
+    display: flex;
+    height: 500px;
+    justify-content: flex-start;
+    width: 100%;
+
+}
+
+.container{
+
+    align-items: center;
+    display: flex;
+    margin-left: 150px;
+
+}
+
+
+
+
+
+/* FUNCTION OF THE CARDS */
+
+.card{
+
+    background-color: #22a8ff;
+    border-radius: 5%;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, .4), -3px 0 10px rgba(0, 0, 0, .2), -4px 0 10px rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    margin-left: -40px;
+    position: relative; /*MUY importante para el efecto*/
+    transition: all .2s ease; /*Transition fuera de pseudoclases. (al dejar de hacer hover, no habría transición, por ejemplo)*/
+    width: 250px;
+
+    
+
+}
+
+.card:hover{
+
+    margin-right: 30px;
+    transform: rotate(5deg) translateY(-15px);
+    
+}
+
+
+
+
+/* STYLES INSIDE THE CARD */
+
+
+/* Card header */
+.card__header{
+
+   margin: 20px 15px 5px;
+
+}
+
+.card__date{
+
+    display: inline-block;
+    color: #ddd;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    margin-bottom: 7px;
+
+}
+
+.card__title{
+
+    color: #fff;
+    font-family:"Roboto", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+
+}
+
+/* Card main */
+
+.card__main{
+
+    color: #fff ;
+    font-family: "Nunito", sans-serif;
+    margin: 0 15px;
+
+}
+
+/* Card footer */
+
+
+.card__footer{
+
+    align-items: center;
+    color: #fff;
+    display: flex;
+    bottom: 0;
+    position: absolute;
+    margin: 0 15px 20px;
+    width: 100%;
+
+}
+
+.card__profile-pic{
+
+    border-radius: 50%;
+    height: 45px;
+    margin-right: 5px;
+    width: 45px;
+
+}
+
+.card__author{
+
+    color: #eee;
+    font-family: "Nunito", sans-serif;
+    font-size: 0,25em;
+
+}

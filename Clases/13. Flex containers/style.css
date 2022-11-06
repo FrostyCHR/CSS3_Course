@@ -1,0 +1,62 @@
+/* FLEXBOX */
+/* Conceptos básicos*/
+
+/*
+    Flex container: Un div (normalmente) con display flex y que contiene elementos.
+    Flex item: Estos elementos dentro de un contenedor.
+
+    Main axis: Por defecto, es el eje x. Tiene dos partes: Main-start y  main-end.
+    Cross axis / secondary axis: Por defecto es el eje y. Mismas partes que en el main.
+
+    Flex-direction: Indica cuál y en qué dirección va en main axis. Row, column, y versiones reverse. (espejo, invierten la dirección)
+    Flex-wrap: Indica por así decirlo si le permitimos o no cambiar las medidas de las cajas. 
+    Sirve para tirar elementos abajo si no hay espacio, en lugar de hacerlos más pequeños. También reverse, que va hacia arriba en lugar de abajo.
+    Flex-flow: Agrupa direction y wrap.
+
+    Justify-content: Posiciona los elementos en el main-axis.
+        Center: Los centra.
+        Space-between: Los reparte para ocupar todo el container. El primer y último elemento se pegan a los bordes.
+        Space-around: Ahora sí se ponen márgenes automáticos. En los bordes hay la mitad que en el resto, porque funciona igual a margin.
+        Space-evenly: Hay LA MISMA DISTANCIA entre cada caja. 
+        Flex-start: Al inicio del eje. Cuidado con flex-direction reverse.
+        Flex-end: Al final del eje. Cuidado con flex-direction reverse.
+    
+    Align-items: Posiciona los elementos en el cross-axis. SOLO UNA FILA.
+        Center: Los centra.
+        Flex-start: Al inicio del eje. Cuidado con flex-direction reverse. USAR CUANDO NO HAY HEIGHT, si no se "buguea".
+        Flex-end: Al final del eje. Cuidado con flex-direction reverse.
+        Baseline: Cuando estemos usando wrap-reverse.
+    
+    Align-content: Posiciona los elementos en el cross-axis. MÄS DE UNA FILA.
+        Center: Los centra.
+        Flex-start: Al inicio del eje. Cuidado con flex-direction reverse. USAR CUANDO NO HAY HEIGHT, si no se "buguea".
+        Flex-end: Al final del eje. Cuidado con flex-direction reverse.
+        Baseline: Cuando estemos usando wrap-reverse con los items en el flex-end para que todo funcione como queramos.
+*/
+
+
+/* Ejemplos */
+
+.boxContainer{
+    align-content: center;
+    border: 2px solid #22ede9;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 800px;
+    justify-content: space-evenly;
+}
+
+.boxContainer__element{
+    background-color: #e6b58b;
+    height: 150px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 150px;
+    
+}
+
+.boxContainer__element--alternativeColor{
+    background-color: #35bfff;
+}

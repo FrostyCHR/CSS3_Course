@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,21 +23,59 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <!--FONT AWESOME'S ICONS-->
+
+    <script src="https://kit.fontawesome.com/45c0f2cc31.js" crossorigin="anonymous"></script>
+
+    <!--CUSTOM FONTS-->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+    <!--CUSTOM CSS-->
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize/normalize.css">
+
+    <!--NORMALIZE-->
+
+    <link rel="stylesheet" href="../../normalize/normalize.css">
 
     <title>Curso CSS3.</title>
 
 </head>
 
 <body>
- 
+
+
+    <main>
+
+        <form class="send-email" action="">
+
+            <div class="send-email__icon-container">
+                <i class="send-email__icon   fa-regular fa-envelope"></i>
+            </div>
+
+            <div class="send-email__input-container">
+
+                <h3>Send Email</h3>
+                <input class="send-email__input send-email__input--email" type="email" placeholder="Enter your email...">
+                <input class="send-email__input send-email__input--subject" type="text" placeholder="Subject...">
+                <textarea class="send-email__input send-email__input--message" type="text" placeholder="Enter your message..."></textarea>
+                <input class="send-email__input send-email__input--submit" type="submit">
+
+
+            </div>
+
+        </form>
+
+    </main>
+
 
 </body>
 
