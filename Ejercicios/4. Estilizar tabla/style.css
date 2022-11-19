@@ -1,0 +1,76 @@
+body{
+
+    min-height: 200vh;
+
+}
+
+
+/* TABLE */
+
+caption{
+
+    font-size: 60px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    margin: 30px;
+
+}
+
+.table{
+
+    border: 2px solid #ccc;
+    border-collapse: collapse; /* MUY importante para que el borde sea bonito. */
+    left: 25vw;
+    position: relative;
+    top: 200px;
+
+}
+
+tr{
+
+    text-align: center;
+
+}
+
+td, th{
+
+    border: 1px solid #ccc;
+    font-family: "Nunito", sans-serif;
+    font-size: 25px;
+    padding: 25px;
+
+}
+
+th{
+
+    background-color: #bbb;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.table__head{
+
+    position: sticky;
+    top: 0;
+
+}
+
+.table__even{
+
+    background-color: #ddd;
+
+}
+
+.table__even:hover, .table__odd:hover, tfoot:hover{
+
+    background-color: #00aacc;
+    color: #000;
+    opacity: .7;
+
+}
+
+.table__footer-data{
+
+    font-weight: 600;
+
+}

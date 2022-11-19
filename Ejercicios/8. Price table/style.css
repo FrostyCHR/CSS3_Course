@@ -1,0 +1,213 @@
+/*---------------GENERAL--------------------*/
+
+*{
+
+    font-family: "Nunito", sans-serif;
+
+}
+
+h2{
+
+    font-family: "Roboto", sans-serif;
+
+}
+
+body{
+
+    background-color: #002288;
+    height: 80vh;
+
+}
+
+.main{
+
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+}
+
+.plans{
+    
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+
+}
+
+.plans__plan{
+
+    align-self: center;
+    align-items: center;
+    display: flex;
+    background-color: #fff;
+    border-radius: 1em;
+    flex-direction: column;
+    height: 25em;
+    margin-right: -2em;
+    width: 20em;
+
+}
+
+
+
+.plans__plan--special{
+    
+    box-shadow: -2px 0 10px rgb(0 0 0 / 40%), -3px 0 10px rgb(0 0 0 / 20%), -4px 0 10px rgb(0 0 0 / 10%);
+    height: 30em;
+    position: relative;
+    width: 15em;
+
+}
+
+
+
+
+
+/*---------------HEADER--------------------*/
+
+
+
+
+.plan__header{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+
+}
+
+.plan__header--special{
+
+    padding-top: calc(1.5em + 1.5em);
+
+}
+
+.plan__price{
+
+    align-items: center;
+    display: flex;
+    padding: 1em;
+
+}
+
+span{
+
+    padding: .04em;
+
+}
+
+.dollar{
+
+    font-size: 1.2em;
+
+}
+
+.number{
+    
+    font-size: 3em;
+    font-weight: bold;
+
+}
+
+.month{
+
+    color: #888;
+
+}
+
+
+
+/*---------------BODY--------------------*/
+
+
+
+
+
+
+
+ul{
+
+    list-style: none;
+
+}
+
+li{
+
+    padding: .17em;
+
+}
+
+.icon{
+
+    background-color: #00cc00;
+    border-radius: 50%;
+    color: #fff;
+    padding: 2.5px;
+
+}
+
+
+
+
+/*---------------FOOTER--------------------*/
+
+
+
+
+
+
+.plan__footer{
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5em;
+    margin-top: auto;
+    width: 100%;
+
+}
+
+.plan__footer--special{
+
+    margin-bottom: 5em;
+
+}
+
+.plan__subscribe{
+    
+    
+    background-color: #fff;
+    border: 2px solid #888;
+    border-radius: .5em;
+    color: #aaa;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 1em;
+    width: 70%;
+
+}
+
+.plan__subscribe:hover{
+
+    background-color: #eee;
+    border: 2px solid #777;
+    color: #444;
+
+}
+
+.plan__subscribe--special{
+
+    color: #fff;
+    background-color: #2277ff;
+    border: 2px solid #2277ff;
+
+}
+
+.plan__subscribe--special:hover{
+
+    color: #fff;
+    background-color: #1166ee;
+    border: 2px solid #1166ee;
+
+}

@@ -1,0 +1,351 @@
+/* --------------------------GENERAL STYLES AND MOBILE-------------------------- */
+
+
+/* GENERAL */
+
+*{
+
+    font-family: "Nunito", sans-serif;
+
+}
+
+
+
+
+
+.login{
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+/* CONTAINERS */
+
+
+.login__container{
+
+    height: 90%;
+    width: 80%;
+
+}
+
+.container{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.login__options-container{
+
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 11px 0;
+
+}
+
+.login__rememberme-container{
+
+    flex-direction: row;
+
+}
+
+.login__password-container, .login__username-container{
+
+    align-items: flex-start;
+    margin: 11px 0;
+
+}
+
+
+/* REST OF TAGS */
+
+
+
+
+
+.login__password, .login__username{
+
+    height: 1.6em;
+    margin: 6px 0;
+    width: 100%;
+
+}
+
+
+.login__username-text, .login__password-text{
+
+    font-weight: bold;
+
+}
+
+
+
+.login__rememberme-text{
+
+    margin-right: 11px;
+
+}
+
+.login__forgotten-password{
+
+    color: #22ddff;
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+.login__login-button{
+
+    background-color: #333;
+    border-radius: .3em;
+    color: #fff;
+    padding: 7px;
+    margin: 11px 0;
+
+}
+
+.login__login-button:hover{
+
+    background-color: #000;
+
+}
+
+
+
+.login__oher-method-text{
+
+    display: inline-block;
+    margin: 11px 0;
+    text-align: center;
+    width: 100%;
+
+}
+
+
+.login__google-button{
+
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: .3em;
+    padding: 7px;
+    margin: 11px 0;
+
+}
+
+.login__google-button:hover{
+
+    background-color: #fafafa;
+
+}
+
+.login__facebook-button{
+
+    background-color: #375794;
+    border: 1px solid #ddd;
+    border-radius: .3em;
+    color: #fff;
+    padding: 7px;
+    margin: 11px 0;
+
+}
+
+.login__facebook-button:hover{
+
+    background-color: #264683;
+
+}
+
+.login__twitter-button{
+
+    background-color: #1d9bf0;
+    border: 1px solid #ddd;
+    border-radius: .3em;
+    color: #fff;
+    padding: 7px;
+    margin: 11px 0;
+
+}
+
+.login__twitter-button:hover{
+
+    background-color: #0c8ad0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+button{
+
+    border: none;
+    width: 100%;
+
+}
+
+h2{
+
+    font-family: "Roboto", sans-serif;
+    margin: .5em;
+
+}
+
+p{
+
+    margin: .5em;
+
+}
+
+input{
+
+    border: 1px solid #ccc;
+
+}
+
+input:focus{
+
+    outline: 1px solid #ccc;;
+
+}
+
+.login__decoration{
+
+    background-color: #222;
+    background-image: 
+    linear-gradient(
+        0deg,
+        rgba(0,0,0,.4),
+        rgba(0,0,0,.4)
+    ),
+    url(https://images.pexels.com/photos/12495614/pexels-photo-12495614.jpeg?cs=srgb&dl=pexels-syed-qaarif-andrabi-12495614.jpg&fm=jpg&_gl=1*123bmtn*_ga*MTA5NjA4NjE1NS4xNjY4MjU3NzM5*_ga_8JE65Q40S6*MTY2ODI1NzczOS4xLjEuMTY2ODI1ODAwOS4wLjAuMA..);
+    background-size: cover;
+    background-position: center;
+    display: none;
+
+}
+
+
+
+@media screen and (min-width:700px) and (max-width:1023px) {
+    
+    /* --------------------------TABLET-------------------------- */
+
+    /* GENERAL */
+
+    .login{
+
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    .login__container{
+
+        height: 90%;
+        margin: .5em;
+    
+    }
+
+
+    .login__decoration{
+
+        display: block;
+        margin: .5em;
+        width: 90%;
+        height: 35em;
+
+    }
+
+
+
+    /* CONTAINERS */
+
+
+
+
+
+
+
+
+    /* REST OF TAGS */
+
+    button:hover{
+
+        cursor: pointer;
+
+    }
+
+
+
+
+}
+
+@media screen and (min-width:1024px) {
+    
+    /* --------------------------DESKTOP-------------------------- */
+
+    /* GENERAL */
+
+    .login{
+
+        justify-content: space-between;
+
+    }
+
+    .login__container{
+
+        height: 90%;
+        margin: 2em 1em 2em 2em;
+        padding: 8em 0;
+        width: 40%;
+    
+    }
+
+
+    .login__decoration{
+
+        display: block;
+        margin: 2em 2em 2em 1em;
+        width: 60%;
+
+    }
+
+
+
+    /* CONTAINERS */
+
+
+
+
+
+
+
+
+    /* REST OF TAGS */
+
+    button:hover{
+
+        cursor: pointer;
+
+    }
+
+
+
+
+}
