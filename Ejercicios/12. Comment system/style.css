@@ -1,0 +1,116 @@
+*{
+
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+
+}
+
+body{
+
+    align-items: center;
+    background-color: #1b1c2c;
+    display: flex;
+    justify-content: center;
+
+}
+
+img{
+
+    border-radius: 50%;
+    height: 4em;
+    object-fit: cover;
+    object-position: center;
+    outline: 1px solid #799add;
+    width: 4em;
+
+}
+
+ul{
+
+    list-style: none;
+
+}
+
+.comments{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 60%;
+
+}
+
+.comments__comment{
+
+    background-color: #172645;
+    border: 1px solid #45577e;
+    border-radius: .4em;
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    margin: 1em 0;
+    min-height: 130px;
+    min-width: 700px;
+    width: 100%;
+
+}
+
+.comment__image-container, .comment__data{
+
+    margin: .4em;
+
+}
+
+.comment__data{
+
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.comment__header{
+
+    align-items: center;
+    display: flex;
+
+}
+
+.comment__time{
+
+    color: #888;
+    margin-left: .5em;
+
+}
+
+.comment__options{
+
+    display: flex;
+
+}
+
+li{
+
+    color: #067edf;
+    cursor: pointer;
+    font-size: .9em;
+    margin: 0 .3em;
+    transition: color .04s ease-in-out;
+
+}
+
+li:hover{
+
+    color: #035bac;
+
+}
+
+.comments__reply{
+
+    align-self: flex-end;
+    width: calc(100% - 88.4px);
+
+}

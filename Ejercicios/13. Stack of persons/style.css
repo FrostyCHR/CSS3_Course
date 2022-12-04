@@ -1,0 +1,141 @@
+*{
+
+    font-family: "Nunito", sans-serif;
+
+}
+
+.stack{
+
+    align-items: center;
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    min-width: 700px;
+
+}
+
+.stack__person{
+
+    background-position: center;
+    background-size: cover;
+    border: .5em solid #fff;
+    border-radius: 50%;
+    height: 10em;
+    margin-left: -2em;
+    position: relative;
+    transition: all .2s ease-in-out;
+    width: 10em;
+
+}
+
+.stack__person::before{
+
+    background-color: #111;
+    border-radius: .3em;
+    color: #fff;
+    content: "test";
+    display: none;
+    height: 3.2em;
+    max-height: 3.2em;
+    overflow: hidden; /* IMPORTANTE para cuando hay más texto que contenedor. */
+    padding: 1em;
+    position: absolute;
+    text-align: center;
+    text-overflow: ellipsis; /* IMPORTANTE para cuando hay más texto que contenedor. */
+    top: -4em;
+    white-space: nowrap; /* IMPORTANTE para cuando hay más texto que contenedor. */
+    width: 100%;
+
+}
+
+.stack__person::after{
+
+    background-color: #111;
+    content: "";
+    display: none;
+    height: 1.5em;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: -1.7em;
+    transform: rotate(45deg);
+    width: 1.5em;
+
+}
+
+.stack__person:hover{
+
+    transform: translateY(-.4em);
+
+}
+
+.stack__person:hover::before, .stack__person:hover::after{
+
+    display: block;
+
+}
+
+
+.stack__person1{
+
+    background-image: url(https://cdnb.20m.es/sites/112/2019/04/cara6.jpg);
+
+}
+
+.stack__person1::before{
+
+    content: "María Fernandaaaaaaaaaaa";
+
+}
+
+
+.stack__person2{
+
+    background-image: url(https://eststatic.com/2676/conversions/malas-personas-default.jpg);
+
+}
+
+.stack__person2::before{
+
+    content: "Alberto Porro";
+
+}
+
+
+.stack__person3{
+
+    background-image: url(https://pbs.twimg.com/profile_images/1551260842284433419/vL0N9rEr_400x400.jpg);
+
+}
+
+.stack__person3::before{
+
+    content: "Pol";
+
+}
+
+
+.stack__person4{
+
+    background-image: url(https://sm.ign.com/t/ign_es/screenshot/default/14969987109466_kz5j.1280.jpg);
+
+}
+
+.stack__person4::before{
+
+    content: "Kratos";
+
+}
+
+.stack__person5{
+
+    background-image: url(https://codigoespagueti.com/wp-content/uploads/2022/11/naruto-hinata-nabu-fanart.jpg);
+
+}
+
+.stack__person5::before{
+
+    content: "Hinata Hyuga";
+
+}
