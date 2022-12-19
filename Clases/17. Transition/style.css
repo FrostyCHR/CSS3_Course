@@ -1,0 +1,21 @@
+/*--------------------------TRANSITION--------------------------*/
+/*
+
+¿Qué es?
+
+Es una propiedad que define el cambio de un valor a otro de una o más propiedades. 
+Por ejemplo; si tenemos un fondo verde, y al hacer hover lo cambiamos a rosa, transition hará que este cambio se suavice.
+CUIDADO, no poner transition dentro de estados como hover, active, fucus... porque solo se aplicará la transicion MIENTRAS producimos este estado, 
+por lo que si quitamos el hover, por ejemplo, las propidedades cambian, pero al no haber transition lo hacen de manera brusca.
+
+
+Propiedades
+
+transition-property: Especifica sobre que propiedad o propiedades aplicaremos la transición.
+transition-duration: Cuánto tiempo dura.
+transition delay: Indica el retraso desde que hacemos la acción (hover normalmente) hasta que empieza la transición.
+
+
+*/
+
+

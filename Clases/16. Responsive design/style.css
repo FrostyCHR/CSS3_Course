@@ -1,0 +1,108 @@
+/*--------------------------RESPONSIVE DESIGN------------------------------*/
+/*
+
+¿Qué es?
+    
+    Es una manera de diseñar páginas web en en el que estas adaptan su contenido al dispositivo en el que se esté viendo de manera automática.
+    No es CSS3 de por sí, es un concepto que se puede llevar a cabo en parte con CSS3, aunque también con JavaScript.
+
+¿Cómo se hace?
+
+    Se usan los media queries. (@media) Son un condicional, como un "if"; si se cumple una condición, hará algo, si no, no.
+    Se pueden poner varias condiciones con un and (&&) y se pueden poner or (||).
+
+¿Cómo se trabaja?
+
+    Principalmente hay dos maneras de trabajar con responsive design en CSS3, mobile-first y desktop-first.
+    La primera es la más usada y recomendable porque no requiere de mucho código, y consiste en empezar en resolución de móvil e ir escalando hacia arriba.
+    La segunda es todo lo contrario, empiezas en escritorio y acabas en móvil. Se usan más selectores y código en general, por lo que no se suele usar.
+
+
+*/
+
+
+/* Mobile */
+
+
+*{
+
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+
+}
+
+body{
+
+    display: grid;
+    grid-template-areas: 
+    
+    "Header"
+    "Main"
+    "Main"
+    "Main"
+    "Aside"
+    "Footer"
+
+    ;
+    height: 100vh;
+
+}
+
+
+.header{
+
+    background-color: teal;
+    grid-area: Header;
+    padding: 20px;
+
+}
+
+.main{
+
+    background-color: cadetblue;
+    grid-area: Main;
+    padding: 20px;
+
+}
+
+.aside{
+
+    background-color: sienna;
+    grid-area: Aside;
+    padding: 20px;
+
+}
+
+.footer{
+
+    background-color: darkblue;
+    grid-area: Footer;
+    padding: 20px;
+
+}
+
+@media screen and (min-width:850px) {
+    
+    /* Desktop */
+
+    body{
+
+        grid-template-areas: 
+        
+        "Header Header Header Header"
+        "Main Main Main Aside"
+        "Main Main Main Aside"
+        "Main Main Main Aside"
+        "Main Main Main Aside"
+        "Main Main Main Aside"
+        "Main Main Main Aside"
+        "Main Main Main Aside"
+        "Main Main Main Aside"
+        "Main Main Main Aside"
+        "Footer Footer Footer Footer"
+
+        ;
+
+    }
+
+}

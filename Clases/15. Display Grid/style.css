@@ -1,0 +1,335 @@
+/*------------------ GRID -------------------*/
+
+/*Conceptos básicos*/
+/*
+
+Grid container: Elemento que tiene display: grid.
+Grid item: Elementos que se encuentran dentro de un grid container. Hijos directos. NO confundir con grid cell, no son lo mismo. Un item puede ocupar más de una cell.
+Grid cell: Cada celda (como en excel) de la rejilla (grid container).
+Grid tracks: Filas y columnas de la rejilla.
+Grid area: Conjunto de dos o más grid cells. Deben ser cuadriláteros, no pueden haber diagonales. Las define el desarrollador.
+Grid-lines: Rayas divisorias entre las celdas. Los bordes se encuentran "collapsed" si fuese una tabla.
+
+Grid implícito:
+Cuando los elementos ocupan más celdas de las que hay definidas, se crea una nueva fila con los elementos que no caben, esto es grid implícito.
+
+*/
+
+
+/* Propiedades */
+/*
+
+Grid container:
+
+Grid-template-rows: Especifica cómo estarán distribuidas las filas en la rejilla. Por ejemplo, 100px 30px 2fr 1fr. (Una fila de 100px, otra de 30px, el resto del espacio se divide en tres partes, 2 para la primera fila y una para la segunda)
+Grid-template-columns: Lo mismo que grid-template-rows pero en columnas, vertical.
+Grid-row-gap: Espacio entre cada una de las filas en una rejilla.
+Grid-column-gap: Como grid-row-gap pero en columnas.
+
+
+Grid item:
+
+Grid-row: Valor / valor. En qué grid-line comienza y en cuál acaba. En filas. VALOR SPAN: span x. Que ocupe el número de columnas o filas x. En lugar de ir contando grid lines.
+Grid-column: Lo mismo que grid-row pero en columnas.
+
+
+Grid implícito:
+
+Grid-auto-rows: Describe cómo serán las filas de grid implícito. Solo un valor, las dimensiones. Como grid-template-rows.
+Grid-auto-columns: Como el anterior pero en columnas.
+Grid-auto-flow: Dice si el grid auto se organiza en columnas, filas o "dense". El último rellena los espacios vacíos, si hay.
+
+
+Grid dinámico: (cambia respecto a una variable)
+
+Min-content: Valor para propiedades como grid-template-columns que especifica que las medidas van a ser las mínimas para que quepa el contenido. (si es texto, una palabra por línea, por ejemplo)
+Max-content: Lo contrario a min-content. Medida máxima pero que se ajuste al contenido. (solo una línea si es texto, por ejemplo)
+
+Auto-fill: Valor para propiedades como grid-template-columns en conjunto con repeat. Crea columnas/filas del tamaño que le digamos siempre que estas entren.
+Auto-fit: Similar a la anterior, pero si no hay elementos no las crea.
+
+*/
+
+
+/* Unidades: */
+/*
+
+fr: Fracciones. Al poner por ejemplo 3 filas de 1fr cada una, dividimos el height en 3 partes iguales. Si una tuviese 2fr i otra 1 fr en column, el width se divide en 3, 2 para uno y uno para otro. Para grid-template-columns y rows.
+repeat(): Función de dos parámetros. Número de repeticiones, cosa a repetir. repeat(2, 100px 1fr) = 100px 1fr 100px 1fr. Principalmente para grid-template-columns y rows.
+span: span x. Que ocupe el número de columnas o filas x. En lugar de ir contando grid lines. PARA grid-rows y grid-columns.
+
+*/
+
+
+
+body{
+
+    padding: 20px;
+
+}
+
+.gridcontainer{
+
+    border: 3px dashed #000;
+    display: grid;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-columns: repeat(9, 50px) 3fr 1fr;
+    grid-template-rows: repeat(10, 50px);
+    height: auto;
+    /*padding: 10px;*/ /*Para separar los grid tracks del container.*/
+    width: auto;
+
+}
+
+.griditem{
+
+    border: 1px solid #000;
+
+}
+
+.griditem:first-child{ /* Seleccionar el primer hijo. */
+
+    background-color: aqua;
+    grid-column: 1 / 4;
+
+}
+
+.griditem:nth-child(4){ /* Seleccionar el hijo nº entre paréntesis. */
+
+    background-color: blueviolet;
+    grid-column: 9 / 11;
+    grid-row: 1 / span 3 ;
+
+} 
+
+
+
+
+.gridcontainer2{
+
+    border: 5px solid #000;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-auto-columns: 400px;
+    grid-auto-rows: 200px;
+    grid-gap: 5px;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+    margin-top: 300px;
+
+}
+
+.griditem2{
+    
+    border: 2px solid #000;
+    
+}
+
+.griditem2:nth-child(3){
+
+    grid-column: 4 / span 2;
+
+}
+
+
+
+
+
+.gridcontainer3{
+
+    border: 5px dashed brown;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-rows: repeat(3, 100px);
+    margin-top: 100px;
+
+}
+
+.griditem3{
+
+    border: 1px solid burlywood;
+    padding: 15px;
+
+}
+
+
+
+/*Alineación en Grid (secundario, mejor usar flex)*/
+
+/*
+
+Justify-content: Dice en qué parte del eje de abscisas se situa el conjunto de celdas dentro de un grid container. Sí, el grid container puede ser más grande que las celdas; por ejemplo al ponerle medidas fijas.
+Align-content: Lo mismo que el anterior pero en el eje de ordenadas.
+Podemos dar los valores space-around, space-between y space-evenly a estas dos propiedades.
+
+Justify-items: Sirve para decir en qué parte de la columna se encontrarán los elementos de un grid-container.
+Align-items: Lo mismo que el anterior pero en filas.
+
+Justify-self: Mueve el grid item seleccionado en el eje horizonatal dentro de su celda.
+Align-self: Lo mismo que el anterior pero en vertical.
+
+Place-xxxx: Shorthand de las anteriores propiedades. Primero align-xxxx y luego justify-xxxx.
+
+Order: Igual que en flex. Un z-index en los ejes x e y.
+
+Valores: Stretch (por defecto), center, start, end.
+
+
+
+*/
+
+.gridaligncontainer{
+
+    align-items: center;
+    border: 5px ridge rebeccapurple;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 360px);
+    grid-template-rows: repeat(3, 100px);
+    justify-content: end;
+    justify-items: center;
+
+    margin-top: 200px;
+
+}
+
+.gridalignitem{
+
+    border: 1px solid grey;
+
+}
+
+.gridalignitem:first-child{
+
+    align-self: start;
+    justify-self: end;
+
+}
+
+
+
+/* Grid areas: Otra forma de trabajar grid */
+/*
+
+Como se explica en los conceptos básicos, a grid area is compound by two or more grid cells.
+
+Se utiliza la propiedad grid-template-areas para definirlas.
+Para aplicarlas, se una grid-area en el item.
+
+IMPORTANTE: Es una manera completamente diferente de usar grid. Se contrapone al uso de propiedades como grid-template-columns o grid-rows.
+
+*/
+
+.gridareacontainer{
+
+    border: 4px solid steelblue;
+    display: grid;
+    grid-template-areas: 
+    
+    "header header header header"
+    "main main main aside"
+    "footer footer footer footer"
+
+    ;
+    margin-top: 200px;
+
+}
+
+.gridareaitem{
+
+    color: #fff;
+
+}
+
+.gridareaitemheader{
+
+    background-color: royalblue;
+    grid-area: header;
+    height: 6.5vh;
+
+}
+
+.gridareaitemmain{
+
+    background-color: olivedrab;
+    grid-area: main;
+
+}
+
+.gridareaitemaside{
+
+    background-color: aquamarine;
+    grid-area: aside;
+
+}
+
+.gridareaitemfooter{
+
+    background-color: thistle;
+    grid-area: footer;
+    height: 6.5vh;
+
+}
+
+
+/* Nombrar grid lines */
+/*
+
+Se usa este símbolo en las propiedades grid-templatae-columns y rows []. Dentro se pone el nombre que le queremos dar al line.
+
+*/
+
+
+
+.gridcontainer4{
+
+
+    border: 5px groove teal;
+    display: grid;
+    grid-template-columns: 
+                [firstc]
+                200px
+                [secondc]
+                200px
+                [thirdc]
+                200px
+                [finalc];
+
+    grid-template-rows: 
+                [firstr]
+                200px
+                [secondr]
+                200px
+                [thirdr]
+                200px
+                [finalr];
+    place-content: center;
+
+
+    margin-top: 200px;
+
+}
+
+.griditem4{
+
+    border: 1px solid yellowgreen;
+
+}
+
+.griditem4:first-child{
+
+    grid-column: firstc / thirdc;
+
+}
+
+/* Shorthands */
+/*
+
+Además de los ya vistos, como grid-column, que engloba grid-column-start y grid-column-end, también está grid-templete que engloba grid-template-rows y grid-template-columns o grid-areas.
+Finalmente, está grid. Abrebia TODO lo de grid. Nada recomendable.
+
+Recuerda que no todos los shorthands son buenos, border, transition, grid-rows, grid-columns, place-items, margin, padding.. sí, 
+pero otros solo dan problemas o hacen el código más lioso, como background, flex, grid, o grid-template. No siempre vale la pena ahorrarse unos pocos caracteres.
+
+*/
