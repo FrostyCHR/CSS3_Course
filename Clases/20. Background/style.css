@@ -1,0 +1,53 @@
+/*-------------------Background-------------------*/
+/*
+
+Background es un shorthand que abrebia las siguientes propiedades: 
+
+background-color: El color que tendrá de fondo un elemento, simple.
+background-image: Utilizamos la función url() para poner el link de la foto.
+background-size: El equivalente a object-fit pero para imágenes cuando estan de fondo. Se pueden dar valores numéricos. Hasta 2, uno por eje.
+background-position: El equivalente a object-position pero para imágenes cuando estan de fondo.
+background-repeat: Define si se repite o no la imagen de fondo cuando tenemos background-size: contain.
+background-clip: Define desde qué parte se empieza a ver la imagen. Lo que hace es CORTARLA.
+    border-box: Se supone que desde el borde, pero en realidad es desde el padding (este incluido).
+    padding-box: Desde el padding, incluyéndolo.
+    content-box: Desde el contenido, incluyéndolo.
+background-origin: Igual que background-clip, pero lo que hace es empezar a GENERAR la imagen, no la CORTA.
+background-attachment: Define si la imagen de fondo se moverá con el scroll o se quedará fija. MOLA MUCHO. 
+Lo que se mueve es la foto de fondo, no lo que es el elemento. Es decir, no se cambia nada de la estructura. El elemento se moverá, pero la foto no.
+
+*/
+
+.element{
+
+    background-color: bisque;
+    background-clip: content-box; /* Se corta. */
+    background-image: linear-gradient(0deg, rgba(0,0,0, 0.4),rgba(0,0,0, 0.4)),  /* IMPORTANTE. Los deg (0) y las comas */ url(https://lh3.googleusercontent.com/GWwW-qdP5N9YFJl266yFTUl8Rqso2wXOsjLamjJHnXI4XYM_Flf-SMvZ0dnAYdCwLQ=h500);
+    background-origin: content-box; /* Se genera. */
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 30px solid #8833a6;
+    height: 450px;
+    padding: 50px;
+    width: 500px;
+
+}
+
+
+.element2{
+
+    background-image: url(https://i.pinimg.com/originals/58/2d/96/582d96a1df2d94bb439af1594639ccfe.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800px;
+    width: 100%;
+
+}
+
+
+
+
+p{
+    font-size: 25px;
+}

@@ -13,9 +13,75 @@ Propiedades
 
 transition-property: Especifica sobre que propiedad o propiedades aplicaremos la transición.
 transition-duration: Cuánto tiempo dura.
-transition delay: Indica el retraso desde que hacemos la acción (hover normalmente) hasta que empieza la transición.
+transition-delay: Indica el retraso desde que hacemos la acción (hover normalmente) hasta que empieza la transición. Al quitarla también.
+transition-timing-function: Determina la manera en la que se va a hacer la transición. Todas tardan el mismo tiempo, pero unas van muy rápido al inicio, otras al final, otras van siempre igual...
+    linear: El cambio va a velocidad constante.
+    ease: Empieza un poco lento (muy al inicio), acelera MUCHO, y se frena al final. Valor por defecto.
+    ease-in: Empieza MUY lento, y va acelerando hasta el final.
+    ease-out: Empieza rápido y se va frenando hasta el final.
+    ease-in-out: Empieza lento, acelera a la mitad, y vuelve a frenar al final.
+
+transition: Shorthand que abrebia todas las anteriores.
 
 
+inherit: Coge el valor que tenga el elemento padre en esa misma propiedad.
 */
 
 
+.container{
+
+    padding: 0 30px;
+    position: relative;
+
+}
+
+.container:hover > .item{
+
+    left: calc(100% - 30px - 200px);
+
+}
+
+.item{
+
+    background-color: crimson;
+    color: #fff;
+    height: 200px;
+    left: 0;
+    margin: 30px 0;
+    position: relative;
+    text-align: center;
+    transition-property: left;
+    transition-duration: 5s;
+    width: 200px;
+
+}
+
+.item:first-child{
+
+    transition-timing-function: linear;
+
+}
+
+.item:nth-child(2){
+
+    transition-timing-function: ease;
+
+}
+
+.item:nth-child(3){
+
+    transition-timing-function: ease-in;
+
+}
+
+.item:nth-child(4){
+
+    transition-timing-function: ease-out;
+
+}
+
+.item:last-child{
+
+    transition-timing-function: ease-in-out;
+
+}

@@ -1,0 +1,127 @@
+/*---------------------ANIMACIONES---------------------*/
+/*
+
+Las animaciones son una manera de cambiar las propiedades de un elemento a través del tiempo.
+DIFERENCIAS con transition: 
+    -Las animaciones permiten más de dos estados. (inicial y final)
+    -Las transiciones requieren de un estado como hover, focus...
+    -Las animaciones se pueden reproducir las veces que quieras
+    Por lo tanto, para cosas simples de dos estados o que requieran de un estado usaremos transition, y para cosas más complejas animation.
+
+Para crear animaciones debemos utilizar la regla keyframes.
+
+Propiedades:
+
+animation-name: Debemos poner el nombre de la animación que le queremos dar al elemento. (Está en el keyfrmaes) Obligatoria.
+animation-duration: Tiempo que tarda en hacerse. Obligatoria.
+animation-timing-function: De qué manera se van a hacer los cambios. Más rápido al inicio pero más lento al final, siempre igual... Como en transition.
+animation-iteration-count: Cuántas veces se va a reproducir la animacion. Es posible decir infinite.
+animation-delay: El tiempo que hay entre que se activa y se empieza a hacer la animación. Igual que en transition.
+animation-direction: De qué manera se va a reproducir la transición. Nota, se suele requerir un 2 o más en animation-iteration-count.
+    Normal: De 0% a 100%.
+    Reverse: De 100% a 0%.
+    Alternate: Hace un normal y luego un reverse.
+    Alternate-reverse: Hace un reverse y luego un normal.
+animation-fill-mode: Define de qué manera se quedará un elemento tras una animación. Por supuesto, animation-iteration-count no puede ser infinite.
+    forwards: Se queda como termina la animación. Si terminó en 100%, se queda con las propiedades del 100%. Si terminó en 0%, se quedan las propiedades del 0%.
+    both: Para entender esto, antes hay que saber un problema. Si tenemos algo de delay, las propiedades son las del elemento y no las del 0%. Para evitar esto, se usa both.
+
+animation: Shorthand de todas las propiedades anteriores.
+
+Cubic-bezier:
+
+Es la función por la que se rige el tiempo y el cambio en transiciones y animaciones.
+
+
+
+~: Presionando Alt, primero 1, luego 2, y por último 6 en el teclado numérico. Soltar el Alt.
+
+
+*/
+
+
+
+.container{
+
+    display: inline-block;
+    left: 40vw;
+    position: relative;
+    top: 20vh;
+
+}
+
+
+.item{
+
+    animation-name: movimiento;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-delay: 4s;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    background-color: slateblue;
+    height: 200px;
+    position: absolute;
+    width: 200px;
+
+}
+
+.container2{
+
+    display: inline-block;
+    left: 40vw;
+    position: relative;
+    top: 50vh;
+
+}
+
+.item2{
+
+    animation-name: movimiento2;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(.57,0,.73,-1.37);
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    background-color: gold;
+    height: 200px;
+    position: absolute;
+    width: 200px;
+
+}
+
+
+@keyframes movimiento{
+
+    0%{
+        background-color: aqua;
+        transform: translateX(0);
+    }
+
+    25%{
+        transform: translateX(100px);
+    }
+
+    50%{
+        transform: translateX(40px);
+    }
+
+    100%{
+        transform: translateX(500px);
+    }
+
+}
+
+@keyframes movimiento2{
+
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(500px);
+    }
+
+}

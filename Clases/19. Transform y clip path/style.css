@@ -1,0 +1,94 @@
+/*-------------------------TRANSFORM-------------------------*/
+/*
+
+Es una única propiedad que sirve para cambiar, modificar, moldear, transformar un elemento.
+Se trabaja con diversas funciones dentro de la propiedad. Se pueden poner más de una función.
+
+
+
+Problema con las funciones: 
+
+Si tenemos algo así: 
+
+.item{
+    transform: translateX(200px);
+}
+
+.item:hover{
+    transform: scaleX(1.2) Solución: translateX(200px);
+}
+
+Lo que ocurrirá es que al hacer hover el scale sobrescribirá al translate. Para evitarlo hay que poner el translate también en el hover.
+
+
+
+Funcionamiento del porcentaje: 
+
+Normalmente, al poner un porcentaje nos referimos a dividir el valor de esa propiedad del CONTENEDOR 
+(en muchos casos se no la definimos nosotros, por lo que o bien tiene las dimensiones de su contenido o usamos el valor por defecto. Piensa en font-size.) en cien partes y coger las indicadas.
+
+En transform no funciona así, el 100% es igual a las dimensiones del elemento en ese eje.
+Si estamos trasladando en el eje X un elemento de 200px de width, al decir transform: translateX(200%), lo estaremos moviendo 400px.
+
+
+
+Funciones:
+    translateX: Mueve el elemento en el eje X. Valores positivos hacia la derecha, negativos hacia la izquierda.
+    translateY: Mueve el elemento en el eje Y. Valores positivos hacia abajo, negativos hacia arriba.
+    translate: "Shorthand" que abrevia los dos anteriores. Separar por una coma. Si hay un único valor, se pone lo mismo a ambos ejes.
+
+    scaleX: Escala el ancho del elemento. Si tiene 200px de width y ponemos scale(0.7), tendrá 170px.
+    scaleY: Escala el alto del elemento. Si tiene 200px de height y ponemos scale(0.7), tendrá 170px.
+    scale: "Shorthand" de las dos anteriores. Separar por una coma. Si hay un único valor, se pone lo mismo a ambos ejes.
+
+    skewX: Hace como una especie de curva que hace al elemento oblicuo. Se usan grados. (deg)
+    skewY: Hace como una especie de curva que hace al elemento oblicuo. Se usan grados. (deg)
+    skew: Igual a skewX. (creo)
+    
+    rotateX: Gira al elemento sobre el eje X. Se usan deg. (grados)
+    rotateY: Gira al elemento sobre el eje Y. Se usan deg. (grados)
+    rotateZ: Gira al elemento sobre el eje Z. Se usan deg. (grados)
+
+*/
+
+/*-------------------------CLIP PATH-------------------------*/
+/*
+
+Es una propiedad que permite dar formas geométricas a un elemento. Usar la página https://bennettfeely.com/clippy/.
+
+*/
+
+
+
+
+body{
+    align-items: flex-end;
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+}
+
+.item{
+
+    background-color: #888;
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    height: 300px;
+    text-align: center;
+    transform: rotateZ(50deg);
+    transition: transform 1s ease-in-out;
+    width: 300px;
+
+}
+
+.item:hover{
+
+    transform: scale(1.23, 2.5) translateX(20%);
+
+}
+
+.item:active{
+
+    clip-path: polygon(50% 0%, 100% 0, 49% 51%, 100% 100%, 0 100%, 49% 51%, 0 0);
+
+}
