@@ -14,7 +14,7 @@ background-clip: Define desde qué parte se empieza a ver la imagen. Lo que hace
     content-box: Desde el contenido, incluyéndolo.
 background-origin: Igual que background-clip, pero lo que hace es empezar a GENERAR la imagen, no la CORTA.
 background-attachment: Define si la imagen de fondo se moverá con el scroll o se quedará fija. MOLA MUCHO. 
-Lo que se mueve es la foto de fondo, no lo que es el elemento. Es decir, no se cambia nada de la estructura. El elemento se moverá, pero la foto no.
+Lo que se mueve es la foto de fondo, no lo que es el elemento. Es decir, no se cambia nada de la estructura. El elemento se moverá, pero la foto no, como un position fixed.
 
 */
 

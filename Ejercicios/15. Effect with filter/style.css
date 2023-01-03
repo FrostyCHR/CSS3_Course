@@ -1,0 +1,46 @@
+body{
+
+    overflow-x: hidden;
+
+}
+
+.container{
+
+    align-items: center;
+    display: flex;
+    background-color: #fff;
+    filter: contrast(30);
+    height: 300px;
+    transform: translateX(750px) translateY(300px);
+
+}
+
+.item1, .item2{
+
+    background-color: #00ff00; /* Por algún motivo, solo funciona con colores "puros". */
+    border-radius: 50%;
+    display: inline-block;
+    filter: blur(20px);
+    height: 150px;
+    margin: 0 80px;
+    width: 150px;
+
+}
+
+.item1{
+
+    animation: movimiento 2s ease infinite alternate;
+
+}
+
+@keyframes movimiento{
+
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(200px);
+    }
+
+}

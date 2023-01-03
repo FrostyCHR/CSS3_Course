@@ -1,0 +1,65 @@
+/*--------------------FILTER--------------------*/
+/*
+
+Es una propiedad similar a transform, porque solo es una propiedad que contiene muchas funciones. Se usa para poner filtros a las imágenes.
+Al igual que en transform, se pueden poner más de una función, y también hay el mismo problema con los estados como hover.
+
+none: Propiedad por defecto, sin filtro.
+blur: Desenfoca la imagen. Valores en px, em o rem.
+brightness: El brillo de la foto. 1 es por defecto y 0 completamente negro. MUY buena manera de ennegrecer sin usar linear gradients.
+contrast: Determina el contraste. 1 es por defecto y 0 nada de contraste. Valores sin unidades o con porcentajes, pero son lo mismo. 100% = 1, 230% = 2.3...
+drop-shadow: Es como un box-shadow, pero funciona en imágenes transparentes o sin fondo. Se puede poner varias veces y los valores son iguales.
+grayscale: Transforma la imagen a escala de grises. 1 es totalmente gris, y 0 es nada gris, es decir normal.
+hue-rotate: Define cómo se van a rotar los colores. (piensa en el típico círculo de los editores de imágenes) Se usan grados (deg).
+invert: Invierte los colores. (como actualmente no sé muy bien de colores, no lo puedo explicar mejor) Valores en decimales o porcentajes.
+opacity: Igual que la propiedad.
+saturate: Satura los colores. (como actualmente no sé muy bien de colores, no lo puedo explicar mejor)
+sepia: Similar a greyscale, pero transforma los colores en una especie de color carne, dorado, algo así.
+
+
+
+*/
+
+body{
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 300vh;
+    justify-content: space-evenly;
+
+}
+
+.image1{
+
+    filter: blur(2px) brightness(0.6);
+
+}
+
+.image2{
+
+    filter: contrast(2) grayscale(.55);
+    
+}
+
+.image3{
+
+    /*box-shadow: 0 0 4px #600086;*/
+    filter: drop-shadow(0 0 4px #600086);
+    
+}
+
+.image4{
+
+    filter: /*hue-rotate(180deg)*/ invert(.9);
+
+}
+
+
+
+.imageofcontrol{
+
+    filter: sepia();
+    transform: scale(.7);
+
+}

@@ -4,6 +4,7 @@
     width: 100px;
     height: 100px;
     position: relative;
+    transition: all, 2s;
 }
 
 .dentro{
@@ -22,7 +23,6 @@
     background: rgb(66, 109, 110);
     width: 200px;
     height: 200px;
-    transition: all, 2s;
 }
 
 a:link{

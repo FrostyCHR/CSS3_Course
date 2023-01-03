@@ -1,0 +1,57 @@
+/*----------------------VARIABLES----------------------*/
+/*
+
+Funcionan igual que en cualquier lenguaje de programación o que en las matematicas. Son cajas que dentro contienen un valor.
+Para declararlas se deben poner dos guiones delante del nombre (--test), y para aplicarlas se debe usar la función var().
+Hay dos tipos: 
+    Globales: Se pueden aplicar a cualquier elemento. Se deben declarar en :root. 
+    Locales: Solo se pueden aplicar sobre el selector que digamos. Se deben declarar dentro del selector en el que queremos que se use. Se puede sobrescribir una variable (usando el mismo nombre) así: 
+    Supongamos una variable --hola. Al ponerle el valor red en :root, y el valor blue en los p, si le damos var(--hola) a un input, será rojo, y si se lo damos a un p será azul.
+    (similar al "var" y al "let" de JavaScript)
+
+*/
+
+:root{
+
+    --comments-background-color: #145;
+
+}
+
+
+
+
+body{
+
+    overflow-x: hidden;
+
+}
+
+.container{
+
+    transform: translate(50%, 50%);
+
+}
+
+.item{
+
+    background-color: var(--comments-background-color);
+    height: 200px;
+    width: 200px;
+
+}
+
+.paragraph{
+
+    --text-color: #aa2;
+
+    color: var(--text-color);
+    font-size: 13px;
+    transform: translateY(200%);
+
+}
+
+.gg{
+
+    color: var(--text-color); /* No funciona porque definimos la variable solo para los elementos clase paragraph. */
+
+}

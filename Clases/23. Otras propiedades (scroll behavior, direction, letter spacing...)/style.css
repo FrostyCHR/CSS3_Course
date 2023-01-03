@@ -1,0 +1,63 @@
+/*------------------LETTER SPACING------------------*/
+/*
+
+Esta propiedad indica la separación entre las letras de un elemento ecogido mediante un selector. (px, em, rem, %...)
+
+*/
+
+p{
+
+    font-size: 15px;
+    font-family: "Nunito", sans-serif;
+    letter-spacing: 12px;
+
+}
+
+
+/*------------------SCROLL BEHAVIOR------------------*/
+/*
+
+Como indica el nombre, controla el scroll.
+    Auto: Es instantáneo, como siempre.
+    Smooth: Va poco a poco.
+SE DEBE APLICAR EN HTML.
+
+*/
+
+html{
+
+    scroll-behavior: smooth;
+
+}
+
+.container{
+
+    font-size: 60px;
+    scroll-behavior: smooth;
+    transform: translateY(500px);
+
+}
+
+#si{
+
+    background-color: cornflowerblue;
+
+}
+
+
+/*------------------USER SELECT------------------*/
+/*
+
+Indica si el usuario puede seleccionar texto o no.
+    None: No se puede.
+
+*/
+
+.selected{
+
+    padding: 150px;
+    text-align: center;
+    transform: translateY(1000px);
+    user-select: none;
+
+}

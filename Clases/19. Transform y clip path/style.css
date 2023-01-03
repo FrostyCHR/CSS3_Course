@@ -24,10 +24,10 @@ Lo que ocurrirá es que al hacer hover el scale sobrescribirá al translate. Par
 
 Funcionamiento del porcentaje: 
 
-Normalmente, al poner un porcentaje nos referimos a dividir el valor de esa propiedad del CONTENEDOR 
-(en muchos casos se no la definimos nosotros, por lo que o bien tiene las dimensiones de su contenido o usamos el valor por defecto. Piensa en font-size.) en cien partes y coger las indicadas.
+Normalmente, al poner un porcentaje nos referimos a dividir el valor de esa propiedad del CONTENEDOR en cien partes y coger las indicadas.
+(en muchos casos no se la definimos nosotros, por lo que o bien tiene las dimensiones de su contenido o usamos el valor por defecto. Piensa en font-size.)
 
-En transform no funciona así, el 100% es igual a las dimensiones del elemento en ese eje.
+En transform no funciona así, el 100% es igual a las dimensiones del elemento en ese eje (no estoy seguro de lo siguiente, pero eso parece) SIEMPRE Y CUANDO el elemento tenga dimensiones fijas. En caso contrario, funciona normal.
 Si estamos trasladando en el eje X un elemento de 200px de width, al decir transform: translateX(200%), lo estaremos moviendo 400px.
 
 
