@@ -1,0 +1,179 @@
+/*-----------------------GENERAL-----------------------*/
+
+/* Scroll behavior */
+
+html{
+
+    scroll-behavior: smooth;
+    scroll-behavior: auto;
+
+}
+
+/* Global variables */
+
+:root{
+
+    --g-leftchat-color: #303430;
+    --g-rightchat-color: #135f40;
+    --g-chats-color: #124345;
+    --g-var4: placeholder;
+    --g-var5: placeholder;
+    --g-var6: placeholder;
+
+}
+
+/* Local variables */
+
+.selector1{
+
+    --l-var1: placeholder;
+    --l-var2: placeholder;
+    --l-var3: placeholder;
+
+}
+
+.selector2{
+
+    --l-var1: placeholder;
+    --l-var2: placeholder;
+    --l-var3: placeholder;
+
+}
+
+/*-----------------------DESKTOP (no responsive)-----------------------*/
+
+/*Containers.*/
+
+body{
+
+    height: 170vh;
+
+}
+
+.chats{
+
+    background-color: var(--g-chats-color);
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    left: 50%;
+    padding: 50px;
+    position: relative;
+    top: 50px;
+    transform: translateX(-50%);
+    width: 900px;
+
+}
+
+/*Left and right sections.*/
+
+.leftchat, .rightchat{
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.leftchat{
+
+    align-self: flex-start;
+
+}
+
+.rightchat{
+
+    align-self: flex-end;
+
+}
+
+/*Messages.*/
+
+.chat__flex{
+
+    display: flex;
+    gap: 13px;
+
+}
+
+.chat__message{
+
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 7px;
+    padding: 12px;
+    width: auto;
+
+}
+
+.chat__time{
+
+    align-self: flex-end;
+    color: #ccc;
+    font-size: 90%;
+    white-space: nowrap;
+
+}
+
+.chat__message--left{
+
+    align-self: flex-start;
+    background-color: var(--g-leftchat-color);
+
+}
+
+.chat__message--right{
+
+    align-self: flex-end;
+    background-color: var(--g-rightchat-color);
+
+}
+
+/*First messages.*/
+
+.chat__message--first{
+
+    position: relative;
+
+}
+
+.chat__message--first::before{
+
+    background-color: inherit;
+    clip-path: polygon(0 0, 100% 72%, 100% 0);
+    content: "";
+    height: 25px;
+    position: absolute;
+    top: 0;
+    width: 25px;
+
+}
+
+.chat__message--left.chat__message--first::before{
+    left: -15px;
+}
+
+.chat__message--right.chat__message--first::before{
+    right: -15px;
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
+/*-----------------------ANIMATIONS-----------------------*/
+
+@keyframes animation1 {
+
+}
+
+@keyframes animation2 {
+
+}
+
+@keyframes animation3 {
+
+}
